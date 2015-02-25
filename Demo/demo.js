@@ -21,7 +21,7 @@ var svg = d3.select(".worldmap").append("svg")
     .attr("width", width)
     .attr("height", height)
 
-d3.json("/data/world.json", function(error, world) {
+d3.json("world.json", function(error, world) {
   svg.selectAll(".subunit")
       .data(topojson.feature(world, world.objects.subunits).features)
     .enter().append("path")
