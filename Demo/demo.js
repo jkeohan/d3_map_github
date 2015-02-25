@@ -1,5 +1,3 @@
-http://jsfiddle.net/gh/get/jkeohan/d3_map_github/tree/master/Demo/
-
 var width = 800;
 var height = 375;
 var map = void 0; // Update global
