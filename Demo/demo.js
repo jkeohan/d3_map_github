@@ -2,10 +2,6 @@ var width = 800;
 var height = 375;
 var map = void 0; // Update global
 
-//var color = d3.scale.category20c()
-var color = d3.scale.ordinal()
-  .domain(["Full","Partial: CMT 1","Partial: CMT 2","Partial: Training 1", "Partial: Training 2", "Zero"])
-  .range(["green","blue","steelblue","orange","yellow","red"])
 
 var projection = d3.geo.mercator()
     .center([20, 5])
