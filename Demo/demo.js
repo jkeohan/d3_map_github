@@ -3,7 +3,7 @@ var height = 375;
 var map = void 0; // Update global
 //var url = "http://localhost:8082/world.json"
 //var url = "http://github.com/jkeohan/d3_map_github/blob/master/Demo/world.json"
-var map = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/world.json"
+var url = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/world.json"
 //var url = "https://raw.githubusercontent.com/jkeohan/d3_map_github/master/Demo/world.json"
 
 // //http://jsfiddle.net/gh/get/D3/3.0.4/jkeohan/d3_map_github/tree/master/Demo
