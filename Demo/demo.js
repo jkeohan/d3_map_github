@@ -2,8 +2,8 @@ var width = 800;
 var height = 375;
 var map = void 0; // Update global
 //var url = "http://localhost:8082/world.json"
-//var url = "http://github.com/jkeohan/d3_map_github/blob/master/Demo/world.json"
-var url = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/"
+var url = "http://github.com/jkeohan/d3_map_github/blob/master/Demo/world.json"
+//var url = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/"
 
 
 // //http://jsfiddle.net/gh/get/D3/3.0.4/jkeohan/d3_map_github/tree/master/Demo
@@ -39,21 +39,24 @@ var url = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/"
 //   }
 // })
 
-var getJSON = function(url) { 
-return new Promise(function(resolve,reject) {
- var xhr = new XMLHttpRequest()
- xhr.open('get', url, true)
-xhr.responseType = 'json'
-xhr.onload = function () {
-  var status = xhr.status
-  if(status == 200) { resolve(xhr.response)}
-  else { reject(status)}
-  }
-  xhr.send()
-  })
-}
+var request = new XMLHttpRequest
+request.open('GET', url )
+var info = JSON.parse(resuest.responseText)
+console.log(info)
 
-console.log(getJSON(url))
+// var getJSON = function(url) { 
+// return new Promise(function(resolve,reject) {
+//  var xhr = new XMLHttpRequest()
+//  xhr.open('get', url, true)
+// xhr.responseType = 'json'
+// xhr.onload = function () {
+//   var status = xhr.status
+//   if(status == 200) { resolve(xhr.response)}
+//   else { reject(status)}
+//   }
+//   xhr.send()
+//   })
+// }
 
 
 var projection = d3.geo.mercator()
