@@ -19,40 +19,41 @@ var url = "gh/get/response.jsonjkeohan/d3_map_github/blob/master/Demo/world.json
 //   }).send();
 // })
 
-var map = {}
+// var map = {}
 
-$.ajax({
-  type: "GET",
-  url: url,
-  crossDomain: true,
-  //async: false,
-  contentType: "application/json",
-  dataType: 'json',
-  success: function (data) { 
-    alert('success');
-    console.log(data);
-    map = data;
-  },
-  error: function(e) { 
-    alert('error');
-    console.log(e);
-  }
-})
-
-// var getJSON = function(url) { 
-// return new Promise(function(resolve,reject) {
-//  var xhr = new XMLHttpRequest()
-//  xhr.open('get', url, true)
-// xhr.responseType = 'json'
-// xhr.onload = function () {
-//   var status = xhr.status
-//   if(status == 200) { resolve(xhr.response)}
-//   else { reject(status)}
+// $.ajax({
+//   type: "GET",
+//   url: url,
+//   crossDomain: true,
+//   //async: false,
+//   contentType: "application/json",
+//   dataType: 'json',
+//   success: function (data) { 
+//     alert('success');
+//     console.log(data);
+//     map = data;
+//   },
+//   error: function(e) { 
+//     alert('error');
+//     console.log(e);
 //   }
-//   xhr.send()
-//   })
-// }
+// })
 
+var getJSON = function(url) { 
+return new Promise(function(resolve,reject) {
+ var xhr = new XMLHttpRequest()
+ xhr.open('get', url, true)
+xhr.responseType = 'json'
+xhr.onload = function () {
+  var status = xhr.status
+  if(status == 200) { resolve(xhr.response)}
+  else { reject(status)}
+  }
+  xhr.send()
+  })
+}
+
+console.log(getJSON(url))
 
 
 var projection = d3.geo.mercator()
