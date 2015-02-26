@@ -41,7 +41,7 @@ var url = "http://github.com/jkeohan/d3_map_github/blob/master/Demo/world.json"
 
 var request = new XMLHttpRequest
 request.open('GET', url )
-var info = JSON.parse(resuest.responseText)
+var info = JSON.parse(request.responseText)
 console.log(info)
 
 // var getJSON = function(url) { 
